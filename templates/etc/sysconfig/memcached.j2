@@ -1,0 +1,5 @@
+PORT="{{ memcached.conf.port }}"
+USER="{{ memcached.user.username }}"
+MAXCONN="1024"
+CACHESIZE="64"
+OPTIONS="-l {{ memcached.conf.bind }}"
