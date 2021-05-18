@@ -9,8 +9,8 @@
 - block:
   - name: make-config | RedHat | {{ memcached.configroot }}/memcached should be deployed
     notify: restart memcached
-    template
-      src:   "{{ memcached.configroot }}/memcached.j2"
+    template:
+      src:   "etc/sysconfig/memcached.j2"
       dest:  "/{{ memcached.configroot }}/memcached"
       mode:  "0644"
       owner: "root"
