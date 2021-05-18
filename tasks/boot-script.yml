@@ -9,12 +9,12 @@
 - name: boot-script | memcached should be started
   when: memcached.started == true
   service:
-    name:    "memcached"
-    enabled: "yes"
+    name:  "memcached"
+    state: "started"
 
 - name: boot-script | memcached should be enabled
   when: memcached.enabled == true
   service:
-    name:  "memcached"
-    state: "started"
+    name:    "memcached"
+    enabled: "yes"
 
